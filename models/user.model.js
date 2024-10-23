@@ -19,7 +19,10 @@ const userSchema = mongoose.Schema({
     type: String,
     required: [true, "Password is required"],
   },
-  
+  role:{
+    type:String,
+    default: "user"
+  }
 });
 
 const userModel = mongoose.model("User", userSchema);
