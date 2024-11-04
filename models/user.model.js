@@ -19,6 +19,11 @@ const userSchema = mongoose.Schema(
     role: {
       type: String,
     },
+    isVerified:{
+      type: Boolean,
+      default: false,
+    },
+    verificationCode: String,
   },
   {
     timestamps: true,

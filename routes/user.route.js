@@ -1,11 +1,13 @@
 const express = require("express");
 const authentication = require("../middlewares/authentication");
 const authorization = require("../middlewares/authorization");
-const { registerUser, loginUser } = require("../controllers/user.controller");
+const { registerUser, loginUser, verifyEmailOtp } = require("../controllers/user.controller");
 const router = express.Router();
 
 //auth user
 router.post("/user/create-user", registerUser);
+
+router.post("/user/verify-otp",verifyEmailOtp);
 router.post("/user/login", loginUser);
 router.get(
   "/user/post-product",
