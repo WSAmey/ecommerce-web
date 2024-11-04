@@ -59,7 +59,7 @@ const registerUser = async (req, res) => {
       (reqp = res),
       (statusCode = 500),
       (message = "Something wenwrong."),
-      (error = erro?.toString())
+      (error = error?.toString())
     );
   }
 };
